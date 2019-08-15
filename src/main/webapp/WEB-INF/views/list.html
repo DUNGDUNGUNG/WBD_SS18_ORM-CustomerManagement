@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout :: head">
-    <title></title>
+    <title th:text="#{customer.title}"></title>
 </head>
 <body>
-<h3>Customers</h3>
+<h2 th:text="#{customer.heading}">Customers</h2>
 <p>
     <a th:href="@{/create}">
-        Add new customer
+        <strong th:text="#{customer.href}">Add new customer</strong>
     </a>
+</p>
+<p style="text-align: right">
+    Language: <a href="?lang=en">English</a> | <a href="?lang=it">Italy</a>
 </p>
 <div class="notify">
     <!--/*@thymesVar id="success" type="com"*/-->
